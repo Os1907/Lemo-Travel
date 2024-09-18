@@ -27,7 +27,7 @@ export const BestTrip= [
         image: mount,
     },
     {
-        name: " ركوب الآحصنة ",
+        name: " ركوب الخيل ",
         image: houraw,
     },
     {

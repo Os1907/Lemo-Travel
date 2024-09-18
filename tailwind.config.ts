@@ -12,8 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        xs: "12px",
+        xxs:"10px"
+      }
     },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
 };
 export default config;
