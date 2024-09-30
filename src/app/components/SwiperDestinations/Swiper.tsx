@@ -3,11 +3,11 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import './SwiperStyle.css';
+import '../../css/SwiperStyle.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import { arabicFont } from '@/helper/font';
 import { Idestination } from '@/helper/interfaces';
@@ -15,10 +15,10 @@ import { Idestination } from '@/helper/interfaces';
 
 interface Iporp{
   data:Idestination[],
-  time:number,
+  time?:number,
   style?:boolean
 }
-const SwiperDestinations = ({data , time,style}:Iporp) => {
+const SwiperDestinations = ({data ,style}:Iporp) => {
   return (
     <>
 
@@ -27,7 +27,7 @@ const SwiperDestinations = ({data , time,style}:Iporp) => {
         effect={'coverflow'}
         centeredSlides={true}
         slidesPerView={'auto'}
-        initialSlide={2}
+        initialSlide={4}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -36,14 +36,7 @@ const SwiperDestinations = ({data , time,style}:Iporp) => {
           modifier: 1.5,
           slideShadows: true,
         }}
-        loop={true}
-
-        autoplay={{
-          delay: time,
-          disableOnInteraction: false,
-        }}
-
-        modules={[EffectCoverflow, Navigation, Autoplay]}
+        modules={[EffectCoverflow, Navigation]}
       >
         {
           data.map((place) => {
@@ -56,7 +49,7 @@ const SwiperDestinations = ({data , time,style}:Iporp) => {
                 {
                   isActive ? <>
 
-                    <div className='  bg-black  rounded-2xl w-3/4 lg:w-auto px-3 animationInterace '>
+<div className='  bg-main  rounded-2xl w-3/4 lg:w-auto px-3 animationInterace absolute bottom-4'>
                     <h6 dir='rtl' className={` text-white font-medium  lg:text-xl text-sm text-center relative z-1 pb-2 `}>
                         <span className={` ${arabicFont.className}`}>{place.name}  </span>
                       </h6>
@@ -79,19 +72,20 @@ const SwiperDestinations = ({data , time,style}:Iporp) => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
+        initialSlide={3}
         coverflowEffect={{
-          rotate: 30,
-          stretch: 0,
+          rotate: 10,
+          stretch: 100,
           depth: 100,
           modifier: 1,
           slideShadows: true,
         }}
-        loop={true}
-        autoplay={{
-          delay: 1000,
-          // disableOnInteraction: false,
-        }}
-        modules={[EffectCoverflow, Pagination,Autoplay]}
+        // loop={true}
+        // autoplay={{
+        //   delay: 1000,
+        //   // disableOnInteraction: false,
+        // }}
+        modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
         {
@@ -105,7 +99,7 @@ const SwiperDestinations = ({data , time,style}:Iporp) => {
                 {
                   isActive ? <>
 
-                    <div className='  bg-black  rounded-2xl w-3/4 lg:w-auto px-3 animationInterace '>
+                    <div className='  bg-main  rounded-2xl w-3/4 mx-4 px-3 animationInterace absolute bottom-4'>
                     <h6 dir='rtl' className={` text-white font-medium  lg:text-xl text-sm text-center relative z-1 pb-2 `}>
                         <span className={` ${arabicFont.className}`}>{place.name}  </span>
                       </h6>
@@ -131,4 +125,3 @@ const SwiperDestinations = ({data , time,style}:Iporp) => {
 }
 
 export default SwiperDestinations
-

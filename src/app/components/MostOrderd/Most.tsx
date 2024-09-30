@@ -1,41 +1,43 @@
 import React from 'react'
-import { arabicFont } from '@/helper/font'
+import { arabicFont, arabicFontMeduim } from '@/helper/font'
 import Dots from '../StlyesComponents/Dots'
 import Card from '../Card/Card'
 import { Hotels } from '@/helper/hotels'
 import Title from '../title/title'
-import Link from 'next/link'
+import Button from '../Button/Button'
+import line from '../../../Images/lins.svg'
+import Image from 'next/image'
 
 const Most = () => {
-  const TopHotels = Hotels.filter((hotel) => hotel.name === "فندق دهب لاجون" || hotel.name === "فندق جيمي" || hotel.name === "فندق جولدن هايتس" ).sort((a,b)=> a.price > b.price ? -1 : 1)
+  const TopHotels = Hotels.filter((hotel) => hotel.name === "فندق دهب لاجون" || hotel.name === "فندق جيمي" || hotel.name === "فندق إيكوتيل دهب").sort((a, b) => a.price > b.price ? -1 : 1)
   return (
     <>
-    <div className="bg-white    w-full relative min-h-screen  ">
-       <Dots/>
-       <div dir="rtl" className={`mx-4 lg:mx-20 ${arabicFont.className}`}>
+      <div className="    w-full relative min-h-screen pb-5">
+        <Dots />
+        <Image src={line} alt="plan" className=" w-full h-full absolute  opacity-55  " />
+        <div dir="rtl" className={`mx-4 lg:mx-20 ${arabicFont.className} pt-10 lg:py-10 `}>
 
-        
-       <Title title="الأكثر طلباً"/>
-      
-        <Card places={TopHotels}/>
-        <div className='flex justify-center items-center my-10 relative z-1'>
-          <Link href={"/hotels"} >
-          <p className='bg-black text-xxs md:text-sm text-white  px-6 py-2 rounded-3xl   hover:px-10 duration-150 transition-all'>
 
-            أستكشف المزيد 
-          </p>
+          <Title title="الأكثر طلباً" />
 
-          </Link>
+          <Card places={TopHotels} />
+          <div className='text-center  text-xxs lg:text-sm my-5  '>
+            <span className={`text-main   ${arabicFontMeduim.className}`}>
+              جميع الآسعار تكون لليلة الواحدة
+            </span>
+          </div>
+
+
+          <Button nav="/hotels" />
         </div>
-       </div>
 
       </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     </>
   )
 }

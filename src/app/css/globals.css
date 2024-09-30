@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+  /* background-image: url(../../Images/main.png);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  scroll-behavior: smooth; */
+  background-color: rgb(255 255 255);
+}
+.bg-blur{
+background: #ffffff2d;
+backdrop-filter: blur(70px);
+-webkit-backdrop-filter: blur(70px);
+}
+.enFont{
+  font-family: "Inter", sans-serif !important;
+}
+.border-blur{
+border: 1px solid #ffffff1f !important;
+
+}
+.bg-extraBlur{
+  background: #ffffff45;
+backdrop-filter: blur(88px);
+-webkit-backdrop-filter: blur(88px);
+}
+
+
+@keyframes width {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+  
+}
+

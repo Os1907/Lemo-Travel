@@ -15,4 +15,5 @@ export interface Ihotel {
   description?: string;
   location?: string;
   services?: Array<IconType | ReactNode >;
+  images: Array<string> ;
 }

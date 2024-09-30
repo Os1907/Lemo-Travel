@@ -1,0 +1,39 @@
+
+
+.swiper-slide {
+  width:10rem;
+  height: 14%; 
+  
+}
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    width:16rem;
+    height: 18%;
+    
+  }
+}
+@media (min-width: 1024px) {
+  .swiper-slide {
+    width:20rem;
+    height: 24%;
+    
+  }
+}
+
+.swiper-slide img {
+  width: 100%;
+object-fit: cover;
+ 
+}
+
+
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

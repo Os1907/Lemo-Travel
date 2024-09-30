@@ -16,15 +16,13 @@ interface Iporp{
 const RahalComponents = ({BestDestination , title , time , style}:Iporp) => {
   return (
     <>
-     <section className="bg-white black  mx-10 w-full relative ">
-       {/* <Wave clas='absolute  h-32 lg:h-32 -top-20 lg:-top-24  w-full'/> */}
+     <section className="bg- white black  mx-10 w-full relative pt-8">
             <Dots/>
        <div className={`relative h-full w-full ${arabicFont.className}`}>
         
         <Title title={title}/>
-        <div className='my-20 '>
-
-        
+        <div className=' my-4  '>
+      
         <SwiperDestinations data={BestDestination} time={time} style={style}/>
 
 

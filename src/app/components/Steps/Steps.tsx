@@ -26,18 +26,18 @@ export default function Steps() {
   }, [steps.length]);
 
   return (
-    <div className={`w-full pt-8 pb-3 lg:pb-16  bg-white rounded-t-[2.5rem] ${arabicFont.className} relative `}>
+    <div className={`w-full  pb-3 pt-10 lg:py-16  bg-white rounded-t-[2.5rem] ${arabicFont.className} relative `}>
                     <Dots />
                     <Title title={"الخطوات"} />
-      <div dir="rtl" className="flex items-center justify-center relative z-4 md:flex-row flex-col    mx-4 gap-y-10 pb-3   pt-2  ">
+      <div dir="rtl" className="flex items-center justify-center relative z-4 md:flex-row flex-col    mx-4 gap-y-10 pb-3   pt-5 lg:pt-2  ">
         {steps.map((step, index) => (
           <div key={step.number} className={`flex  items-center    w-36 md:w-auto    `}>
             <div className="relative  ">
               <div
                 className={`h-6 lg:h-12 w-6 lg:w-12 rounded-full border-2 flex items-center justify-center duration-500  ${
                   step.number <= currentStep
-                    ? "border-black bg-black scale-105 lg:scale-125 "
-                    : "border-gray-300"
+                    ? "border-main bg-main scale-105 lg:scale-125 "
+                    : ""
                 }
                 
 
@@ -45,7 +45,7 @@ export default function Steps() {
               >
                 <span
                   className={` text-xs md:text-sm lg:text-lg ${
-                    step.number <= currentStep ? "text-white" : "text-black"
+                    step.number <= currentStep ? "text-white" : "text-main"
                   } font-bold enFont`}
                 >
                   {step.number}
@@ -53,13 +53,13 @@ export default function Steps() {
               </div>
               {step.number <= currentStep && (
                 <div className="absolute text-xs md:text-sm lg:text-base -bottom-6 lg:-bottom-8 left-0 right-0 flex justify-center">
-                  <IoCheckmarkDoneOutline className="text-black" />
+                  <IoCheckmarkDoneOutline className="text-main" />
                 </div>
               )}
             </div>
             <div
-              className={` font-medium mx-3 text-nowrap w-auto text-sm md:text-xl lg:text-2xl  ${
-                step.number >= currentStep ? "text-gray-500 "  : "text-black "
+              className={` font-medium mx-3 text-nowrap w-auto text-lg md:text-xl lg:text-2xl  ${
+                step.number >= currentStep ? "text-gray-400  "  : "text-main "
               }`}
             >
               {step.title}
@@ -78,9 +78,3 @@ export default function Steps() {
     </div>
   );
 }
-
-
-
-
-
-

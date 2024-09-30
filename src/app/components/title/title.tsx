@@ -7,8 +7,8 @@ interface Iprop{
 const Title = ({title}:Iprop) => {
   return (
     <>
-     <div className="relative z-5 mt-5 mb-10 flex justify-center items-center">
-        <h2  className={`text-4xl lg:text-7xl  text-black  pb-3    inline-block `}>
+     <div className="relative z-5  pb-10 flex justify-center items-center">
+        <h2  className={`text-4xl lg:text-7xl  text-main        inline-block `}>
      {title}
 
         </h2>

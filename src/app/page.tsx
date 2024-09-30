@@ -5,25 +5,27 @@ import Most from "./components/MostOrderd/Most";
 import { BestDestination } from '@/helper/DestinatinsData';
 import Advan from "./components/Advan/Advan";
 import Steps from "./components/Steps/Steps";
-import Framer from "./components/StlyesComponents/Framer";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-hero relative">
+    <> 
       <Hero/>
-      <Steps/>
+    <section className="flex flex-col items-center justify-center  bg-white   ">
 
-      <Framer time={300}>
+      <Steps/>
+      {/* <Framer time={300}>
+      </Framer> */}
       <Advan/>
-      </Framer>
 
       <RahalComponents BestDestination={BestDestination} time={5000} title="أفضل الوجهات السياحية " style={false}/>
       {/* <RahalComponents BestDestination={BestTrip} time={12000} title="أفضل الآنشطه   "  style={true}/> */}
       
       <Most/>
-    </div>
+      <ContactUs/>
+    </section>
 
-    
+    </>
   );
 }

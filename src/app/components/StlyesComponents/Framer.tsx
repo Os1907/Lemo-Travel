@@ -10,7 +10,7 @@ const Framer = ({ children ,time }  :Iporps) => {
     const isInView = useInView(ref, { once: true });
   
     return (
-      <section   className="w-full  flex items-center justify-center bg-white">
+      <section   className="w-full  flex items-center justify-center bg -blur -white">
         <div  ref={ref} style={{
         transform: isInView ? "none" : `translateX(-${time }px)`,
         opacity: isInView ? 1 : 0,
