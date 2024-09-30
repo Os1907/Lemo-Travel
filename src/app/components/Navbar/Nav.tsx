@@ -20,7 +20,7 @@ export default function Navbar() {
     },
     {
       name: 'التواصل',
-      link: '/contact',
+      link: '/',
     } 
     ];
 
@@ -105,7 +105,7 @@ export default function Navbar() {
           {Links.map((item) => (
             <Link
               key={item.name}
-              href={`/${item.link}`}
+              href={`${item.link}`}
               onClick={() => toggleMenu()}
               className="block px-3 py-2 rounded-md text-base font-medium"
             >
