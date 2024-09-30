@@ -26,8 +26,8 @@ const page = () => {
           property="og:description"
           content="استمتع بأفضل العروض في أشهر فنادق دهب مع Lemo Travel. اختر من بين مجموعة واسعة من الفنادق واستمتع بإقامة مميزة بأفضل الأسعار."
         />
-        <meta property="og:image" content="" />//https://--.com/hotels-image.jpg
-        <meta property="og:url" content="" />//https://--.com/hotels
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -36,9 +36,9 @@ const page = () => {
           name="twitter:description"
           content="استمتع بأفضل العروض في أشهر فنادق دهب مع Lemo Travel. اختر من بين مجموعة واسعة من الفنادق واستمتع بإقامة مميزة بأفضل الأسعار."
         />
-        <meta name="twitter:image" content="" /> //https://--.com/hotels-image.jpg
+        <meta name="twitter:image" content="" /> 
 
-        <link rel="canonical" href="" />//https://---.com/hotels
+        <link rel="canonical" href="" />
       </Head>
 
       <section className={`min-h-screen bg-white relative pt-32 overflow-hidden ${arabicFont.className}`}>

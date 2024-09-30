@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   
   openGraph: {
     type: "website",
-    url: "", // ==> empty webSite Url
+    url: "", 
     title: "Lemo Travel - Explore Dahab Like Never Before",
     description:
       "Lemo Travel is your gateway to experiencing the best of Dahab. From diving adventures to cultural explorations, we offer a variety of unforgettable trips tailored to your preferences.",
     images: [
       {
-        url: "", //=>empty
+        url: "",
         width: 1200,
         height: 630,
         alt: "Lemo Travel - Dahab Adventures",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
       "Lemo Travel is your gateway to experiencing the best of Dahab. From diving adventures to cultural explorations, we offer a variety of unforgettable trips tailored to your preferences.",
     images: [
       {
-        url: "", //=>empty
+        url: "", 
         alt: "Lemo Travel - Dahab Adventures",
       },
     ],
   },
  
   alternates: {
-    canonical: "", // ==> empty webSite Url
+    canonical: "", 
   },
 };
 
