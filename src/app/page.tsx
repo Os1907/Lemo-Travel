@@ -6,6 +6,7 @@ import { BestDestination } from '@/helper/DestinatinsData';
 import Advan from "./components/Advan/Advan";
 import Steps from "./components/Steps/Steps";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Framer from "./components/StlyesComponents/Framer";
 
 
 export default function Home() {
@@ -14,14 +15,12 @@ export default function Home() {
       <Hero/>
     <section className="flex flex-col items-center justify-center  bg-white   ">
 
+      <Framer time={300}>
       <Steps/>
-      {/* <Framer time={300}>
-      </Framer> */}
+      </Framer>
       <Advan/>
 
       <RahalComponents BestDestination={BestDestination} time={5000} title="أفضل الوجهات السياحية " style={false}/>
-      {/* <RahalComponents BestDestination={BestTrip} time={12000} title="أفضل الآنشطه   "  style={true}/> */}
-      
       <Most/>
       <ContactUs/>
     </section>
