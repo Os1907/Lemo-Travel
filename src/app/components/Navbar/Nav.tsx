@@ -18,14 +18,6 @@ export default function Navbar() {
       name: 'من نحن ؟',
       link: '/about',
     },
-    // {
-    //   name: 'الخدمات',
-    //   link: '/services',
-    // },
-    // {
-    //   name:"العروض",
-    //   link: '/offers',
-    // },
     {
       name: 'التواصل',
       link: '/contact',

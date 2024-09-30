@@ -43,24 +43,24 @@ const ContactUs = () => {
         <section className='py-5'>
             <div className="mx-auto w-full max-w-7xl px-5 relative ">
                 <div className="mx-auto max-w-3xl text-center">
-                    <h2 className={`mb-4 text-3xl font-bold text-main md:text-5xl ${arabicFont.className}`}>
+                    <h2 className={`mb-4 text-xl lg:text-3xl font-bold text-main md:text-5xl ${arabicFont.className}`}>
                         أستكشف معانا أفضل العروض حصرياً
                     </h2>
                     {
-                        status ? <div className="mx-auto mb-4 flex max-w-xl justify-center py-5">
-                        <form onSubmit={submitForm} className="relative w-full max-w-lg">
+                        status ? <div className="mx-auto mb-4 flex max-w-xl justify-center ">
+                        <form  onSubmit={submitForm} className="relative w-3/4 mx-auto border border-solid border-main rounded-full flex p-1 ">
                             <input
                                 ref={emailRef}
                                 type="email"
-                                className="h-9 w-full border border-solid border-main bg-white px-3 py-4 lg:py-6 text-sm text-main rounded-full active:outline-none focus:outline-none"
-                                placeholder="Enter your email"
+                                className=" w-3/4  bg-white px-3  text-sm text-main rounded-full active:outline-none focus:outline-none"
+                                placeholder="بريدك الآلكتروني"
                             />
-                            <button type="submit" className="relative right-0 top-1 w-full cursor-pointer bg-main px-6 py-2 text-center font-semibold text-white sm:absolute sm:right-[5px] sm:w-auto rounded-full">
-                                Subscribe
+                            <button type="submit" className={` ${arabicFont.className}  w-1/4  bg-main  py-2 text-center font-semibold text-white  rounded-full text-xs lg:text-sm`}>
+                                أشترك
                             </button>
                         </form>
                     </div>:
-                        <div className="mt-4 text-lg font-semibold bg-main  text-white  w-1/4 rounded-full mx-auto shadow-2xl shadow-main py-2   ">
+                        <div className="mt-4 text-lg font-semibold bg-main hover:bg-blue-900 text-white  w-1/4 rounded-full mx-auto shadow-2xl shadow-main py-2   ">
                             <p dir='rtl' className={`${arabicFont.className}`}>
                             تم الاشتراك بنجاح !
                             </p>

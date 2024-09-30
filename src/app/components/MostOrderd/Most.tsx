@@ -12,7 +12,7 @@ const Most = () => {
   const TopHotels = Hotels.filter((hotel) => hotel.name === "فندق دهب لاجون" || hotel.name === "فندق جيمي" || hotel.name === "فندق إيكوتيل دهب").sort((a, b) => a.price > b.price ? -1 : 1)
   return (
     <>
-      <div className="    w-full relative min-h-screen pb-5">
+      <div className="    w-full relative pb-5">
         <Dots />
         <Image src={line} alt="plan" className=" w-full h-full absolute  opacity-55  " />
         <div dir="rtl" className={`mx-4 lg:mx-20 ${arabicFont.className} pt-10 lg:py-10 `}>

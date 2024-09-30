@@ -1,9 +1,7 @@
 import { arabicFontNormal } from '@/helper/font'
 import { Ihotel } from '@/helper/interfaces'
-// import Image from 'next/image'
 import React from 'react'
 import { IoLocation } from 'react-icons/io5'
-// import { TiLocationArrow } from 'react-icons/ti'
 import dynamic from "next/dynamic";
 interface Iprop {
     places: Array<Ihotel>
@@ -12,28 +10,25 @@ const Card = ({ places }: Iprop) => {
     const ImageSwipe = dynamic(() => import("../ImageSwipe/ImageSwipe"), { ssr: false });
     return (
         <>
-            <div dir='rtl' className="grid grid-cols-6 gap-3 lg:gap-5 relative z-4 mx-4 xl:mx-32  ">
+            <div dir='rtl' className="grid grid-cols-6 gap-3 lg:gap-5 relative z-4  xl:mx-32   ">
 
 
                 {
                     places?.map((place, index) => (
-                        <div key={place.name + place.price} className={`  p-2 mx-1 shadow-md    group bg-white border-blur rounded-3xl
+                        <div key={place.name + place.price} className={`  p-2  shadow-md bg-white   group border-blur rounded-3xl
                             ${
                               places.length  ==  index+1 && places[index+1] === undefined && places.length % 2 != 0 ? "col-span-6 md:col-span-2 ":"col-span-3 md:col-span-2" 
                             }
                            
                             `}>
-                            <div className="relative w-full     my-3 \">
-                                <div className="overflow-x-hidden rounded-2xl relative mx-3">
-                                    {/* <Image alt={place.name}
-                                    width={1080}
-                                    height={1080} className=" h-52 lg:h-80 rounded-2xl w-full object-cover" src={String(place.img?.src)} /> */}
+                            <div className="relative w-full      my-2 lg:my-3 ">
+                                <div className="overflow-x-hidden rounded-2xl relative mx-2 lg:mx-3">
                                     <ImageSwipe images={place?.images} />
 
                                 </div>
                                 <div className="mt-4 pl-2 mb-2   relative     ">
                                     <div dir='rtl' className='w-full'>
-                                        <p className="text-base lg:text-lg font-semibold text-main   mb-0 text-center">  {place.name}</p>
+                                        <p className="text-xs md:text-sm lg:text-lg font-semibold text-main   mb-0 text-center">  {place.name}</p>
 
                                         <p className={`text-center text-black  text-xxs lg:text-sm    ${arabicFontNormal.className} `}>{place.description}</p>
                                         <div className='flex justify-center md:justify-between items-center my-3 flex-wrap md:flex-row flex-col gap-y-2 lg:gap-y-0 '>
@@ -45,11 +40,11 @@ const Card = ({ places }: Iprop) => {
 
                                     </div>
 
-                                    <div className='absolute  -top-14 left-1/2 -translate-x-1/2  flex gap-x-2 ml-2 text-xs lg:text-sm  overflow-hidden duration-500 transition-all max-h-40 z-50 '>
+                                    <div className='absolute -top-12 lg:-top-14 left-1/2 -translate-x-1/2  flex gap-x-2 lg:ml-2 text-xs lg:text-sm  overflow-hidden duration-500 transition-all max-h-40 z-50 '>
                                         {
                                             place.services?.map((ServiceIcon, index) => {
                                                 if (typeof ServiceIcon === 'function') {
-                                                    return <span className='text-main   bg-white border-blur inline-black px-2 py-1 rounded-3xl' key={`${index + Math.random()}`}><ServiceIcon /></span>
+                                                    return <span className='text-main text-xxs lg:text-base  bg-white border-blur inline-black px-2 py-1 rounded-3xl' key={`${index + Math.random()}`}><ServiceIcon /></span>
                                                 } else {
                                                     return null;
                                                 }

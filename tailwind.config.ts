@@ -36,7 +36,7 @@ const config: Config = {
             transform: 'translateY(0px) translateX(0px)',
           },
           '50%': {
-            transform: 'translateY(20px) translateX(5px)',
+            transform: 'translateY(10px) translateX(5px)',
           },
           '100%': {
             transform: 'translateY(0px) translateX(0px)  ',

@@ -38,11 +38,10 @@ const page = () => {
         />
         <meta name="twitter:image" content="" /> //https://--.com/hotels-image.jpg
 
-        {/* Canonical URL */}
         <link rel="canonical" href="" />//https://---.com/hotels
       </Head>
 
-      <section className={`min-h-screen bg-white relative py-32 overflow-hidden ${arabicFont.className}`}>
+      <section className={`min-h-screen bg-white relative pt-32 overflow-hidden ${arabicFont.className}`}>
         <Dots />
         <Title title={"الفنادق"} />
         <Card places={Hotels} />

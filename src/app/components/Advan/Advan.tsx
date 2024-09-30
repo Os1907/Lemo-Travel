@@ -20,7 +20,7 @@ const Advan = () => {
             </div>
             <div className="col-span-1 relative">
                 
-            <div className="grid grid-cols-4 grid-rows-6 gap-4">
+            <div className="grid grid-cols-4 grid-rows-6 gap-4 lg:gap-4">
             {BestTrip.map((trip, index) => (
                 <div
                     key={index}
@@ -42,7 +42,7 @@ const Advan = () => {
                 >
                     <div className='  rounded-3xl overflow-hidden'>
 
-                    <Image src={String(trip.image.src)} width={550} height={550} alt={trip.name} className="w-full h-44 object-cover rounded-3xl group-hover:scale-105 duration-500" />
+                    <Image src={String(trip.image.src)} width={550} height={550} alt={trip.name} className="w-full h-28 md:h-32 lg:h-44 object-cover rounded-3xl group-hover:scale-105 duration-500" />
                     </div>
                     {/* <div className="absolute top-0 h-full right-0  w-full hidden group-hover:flex items-center justify-center bg-main bg-opacity-75 text-main    font-bold rounded-3xl">
                         <p className={`text-sm ${arabicFontNormal.className} `}>
